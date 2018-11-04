@@ -106,15 +106,15 @@ public class CustomerSearchApplication {
     }
 
     private List<CustomerSearchResponse> doSearch() {
+        System.out.println(String.format("Searching for customers within %f kms range from latitude, longitude %s, %s",
+            maxDistance, latitude, longitude));
         try {
             CustomerRepository repository = new CustomerFileRepository(inputFile, new ObjectMapper());
             CustomerService service = new CustomerService(repository);
 
             GeoCoordinates coordinates = new GeoCoordinates(latitude, longitude);
             DistanceFilter distanceFilter = new DistanceFilter(new FilterParams(coordinates, maxDistance));
-
-            log.info("Doing the search");
-
+            
             return service.findCustomers(distanceFilter, new Sort(sortField, sortOrder));
 
         } catch (InvalidFilePathException e) {
