@@ -1,7 +1,13 @@
 ## Sample customer search application
 
 A sample CLI based application written in Java, that takes a source file with list 
-of customers, and other search parameters, and shows the output on standard output.
+of customers, and other search parameters (details below), and shows the output on standard output.
+
+Sample input file with customer details:
+~~~
+{"latitude": "52.986375", "user_id": 12, "name": "Christina McArdle", "longitude": "-6.043701"}
+{"latitude": "51.92893", "user_id": 1, "name": "Alice Cahill", "longitude": "-10.27699"}
+~~~
 
 ## Usage
 
