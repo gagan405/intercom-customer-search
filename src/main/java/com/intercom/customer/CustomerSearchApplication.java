@@ -127,6 +127,11 @@ public class CustomerSearchApplication {
         return Collections.emptyList();
     }
 
+    /**
+     * The below classes are wrappers around {@link CoordinateValidator}
+     * as Jcommander needs IValueValidator interface to be implemented for validations.
+     */
+
     public static class LatitudeValidator implements IValueValidator<Double> {
         @Override
         public void validate(String name, Double value) {
