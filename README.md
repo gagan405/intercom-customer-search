@@ -16,7 +16,7 @@ Build a fatJar with all dependencies :
 ``./gradlew fatJar``
 
 ### Run
-To run application with default CLI args :
+To run application with default CLI args (Finding customers within 100kms from Intercom Dublin location):
 
 ``./gradlew run``
 
