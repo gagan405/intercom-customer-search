@@ -83,7 +83,9 @@ from the main class.
 
 ## Why not a Server?
 
-Could be written as a server as well, inside Spring Boot or Dropwizard for e.g. However, migrating this to a REST server should be easy enough as may be the
+The simple use-case of filtering customers based on distance doesn't really need a server based deployment.
+ 
+However, migrating this to a REST server should be easy enough as may be the
 only change to be done is in the main CLI class, which could be converted to a controller. Also, CLI args can be taken as 
 query parameters or request body.  
   

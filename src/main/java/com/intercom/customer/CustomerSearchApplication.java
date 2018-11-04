@@ -114,7 +114,7 @@ public class CustomerSearchApplication {
 
             GeoCoordinates coordinates = new GeoCoordinates(latitude, longitude);
             DistanceFilter distanceFilter = new DistanceFilter(new FilterParams(coordinates, maxDistance));
-            
+
             return service.findCustomers(distanceFilter, new Sort(sortField, sortOrder));
 
         } catch (InvalidFilePathException e) {
